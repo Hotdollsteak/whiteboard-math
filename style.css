@@ -1,8 +1,16 @@
+html,
 body {
   margin: 0;
+  min-height: 100vh;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+body {
   font-family: Arial, sans-serif;
   color: #24192f;
-  min-height: 100vh;
   background:
     radial-gradient(circle at 12% 18%, #ffb7c5 0 8%, transparent 9%),
     radial-gradient(circle at 86% 12%, #b9fbc0 0 7%, transparent 8%),
@@ -53,6 +61,8 @@ input {
   width: 100%;
   box-sizing: border-box;
   background: #fffafc;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 .problem-panel,
@@ -80,64 +90,4 @@ input {
 
 button {
   cursor: pointer;
-  background: #40215f;
-  color: white;
-  border: 1px solid #2d1645;
-}
-
-button:active {
-  background: #6d28d9;
-}
-
-#feedback {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-#hint {
-  font-size: 20px;
-  line-height: 1.4;
-}
-
-.whiteboard-section {
-  margin-top: 20px;
-}
-
-.whiteboard-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-h2 {
-  margin: 0;
-  font-size: 26px;
-}
-
-.whiteboard-tools {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.whiteboard-tools button {
-  font-size: 16px;
-  padding: 10px 12px;
-}
-
-#whiteboard {
-  width: 100%;
-  height: 520px;
-  border: 3px solid #3b2f4a;
-  border-radius: 8px;
-  background:
-    linear-gradient(#ffffff, #ffffff),
-    repeating-linear-gradient(0deg, transparent, transparent 31px, #eadff3 32px);
-  touch-action: none;
-  display: block;
-}
-
-@media (
+  background: #
