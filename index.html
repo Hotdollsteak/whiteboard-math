@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TEAS Math Whiteboard Tutor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top-bar">
+      <div>
+        <h1>TEAS Math Tutor</h1>
+        <p>Practice, solve, circle your answer, then check it.</p>
+      </div>
+
+      <label>
+        Topic
+        <select id="topic" onchange="newProblem()">
+          <option value="x">Solve for x</option>
+          <option value="percent">Percentages</option>
+          <option value="pemdas">PEMDAS</option>
+          <option value="fractions">Fractions</option>
+        </select>
+      </label>
+    </header>
+
+    <section class="problem-panel">
+      <p id="problem">Loading problem...</p>
+
+      <div class="answer-row">
+        <input id="answer" placeholder="Type the answer you circled">
+        <button onclick="checkAnswer()">Check</button>
+        <button onclick="newProblem()">Next</button>
+      </div>
+
+      <p id="feedback"></p>
+      <p id="hint"></p>
+    </section>
+
+    <section class="whiteboard-section">
+      <div class="whiteboard-header">
+        <h2>Whiteboard</h2>
+        <div class="whiteboard-tools">
+          <button onclick="setPenColor('#1f2937')">Ink</button>
+          <button onclick="setPenColor('#6d28d9')">Purple</button>
+          <button onclick="setPenColor('#be123c')">Berry</button>
+          <button onclick="setPenColor('#047857')">Moss</button>
+          <button onclick="clearWhiteboard()">Clear</button>
+        </div>
+      </div>
+
+      <canvas id="whiteboard"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
